@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="状态：未启动"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvLocalUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DSH 填：http://127.0.0.1:8787/v1"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:paddingBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="① 选供应商预设"
+            android:textSize="12sp" />
+
+        <Spinner
+            android:id="@+id/spPreset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="② 上游 Base URL（到 /v1 为止）"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/etBaseUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="https://xxx/compatible-mode/v1"
+            android:inputType="textUri"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="③ 模型名"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/etModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="deepseek-v4.1-flash"
+            android:inputType="text"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="④ API Key（留空则透传 DSH 自带的）"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/etApiKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="sk-..."
+            android:inputType="textPassword"
+            android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/cbAutoStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开机自动启动代理"
+            android:checked="true"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btnAutostartHelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="去开启自启白名单（荣耀/华为必做）" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="保存配置" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="启动" />
+
+            <Button
+                android:id="@+id/btnStop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="停止" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="网络自检" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCopy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="复制地址" />
+
+            <Button
+                android:id="@+id/btnOpenDsh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="打开 DSH" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="日志"
+            android:textSize="12sp"
+            android:paddingTop="12dp" />
+
+        <TextView
+            android:id="@+id/tvLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textSize="11sp"
+            android:textIsSelectable="true"
+            android:paddingTop="4dp" />
+    </LinearLayout>
+</ScrollView>

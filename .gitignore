@@ -1,0 +1,34 @@
+# ---- Gradle / Android 构建产物 ----
+.gradle/
+build/
+app/build/
+*.apk
+*.aab
+*.ap_
+*.dex
+output-metadata.json
+captures/
+release/
+
+# ---- 本地环境（含本机绝对路径，不可提交） ----
+local.properties
+android-home/
+gradle-home/
+toolchain/
+
+# ---- IDE ----
+.idea/
+*.iml
+.vscode/
+.kotlin/
+
+# ---- 签名与密钥（务必不要提交） ----
+*.jks
+*.keystore
+keystore.properties
+signing.properties
+
+# ---- 调试/临时产物 ----
+shots/
+*.log
+*.hprof
